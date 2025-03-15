@@ -8,19 +8,21 @@
     <script type="text/javascript">
         function getData() {
             const argumentArray = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n'];
-            return
+            const result = hogehoge(...argumentArray); // スプレッド構文で引数を渡す
+            console.log(result); // 結果をコンソールに出力
+            document.getElementById("result").textContent = result; // 結果をブラウザに表示
         }
 
         // ↓こちらの関数は触らないこと
         function hogehoge(s1, s2, s3, s4, s5, s6, s7, s8, s9, s10, s11, s12, s13, s14) {
-          return s1 + s2 + s3 + s4 + s5 + s6 + s7 + s8 + s9 + s10 + s11 + s12 + s13 + s14
+          return s1 + s2 + s3 + s4 + s5 + s6 + s7 + s8 + s9 + s10 + s11 + s12 + s13 + s14;
         }
     </script>
   </head>
-  <body>
+  <body onload="getData()"> <!-- ページロード時に getData を呼び出す -->
     <div class="card-container">
       <div class="card">
-          <p id="result"></p>
+          <p id="result"></p> <!-- 結果が表示される場所 -->
       </div>
     </div>
   </body>
